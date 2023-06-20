@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        h1{
+            text-align: center;
+        }
+        .cprvid{
+            margin-top: 0px;
+            margin-left: 475px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+            }
+        .slideshow-container {
+            max-width: 300px;
+            max-height: 300px;
+            position: relative;
+            margin: auto;
+            }
+        .slideshow-container .mySlides img {
+            height: 300px;
+            }
+
+            /* Hide the images by default */
+        .mySlides {
+            display: none;
+            }
+            /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: rgb(10, 9, 9);
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            }
+            /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+            }
+            /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+            }
+
+            /* Caption text */
+        .text {
+            color: #090808;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            }
+            /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            }
+            /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            }
+        .active, .dot:hover {
+            background-color: #717171;
+            }
+            /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+            }
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+            }
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+            }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-person-running fa-1x" style="color:red"></i>
+                일상 속 위기 탈출
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            기본응급처치
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./cpr.html">심폐소생술</a></li>
+                            <li><a class="dropdown-item" href="./heimlich.html">하임리히법</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            상황별응급처치
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./cold.html">감기</a></li>
+                            <li><a class="dropdown-item" href="./temperature.html">온도로 인한 부상</a></li>
+                            <li><a class="dropdown-item" href="./bruise.html">타박상 & 찰과상</a></li>
+                            <li><a class="dropdown-item" href="./animal.html">동물에게 당했을 때</a></li>
+                            <li><a class="dropdown-item" href="./emergency.html">위급상황</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            게임
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./game_cpr.html">심폐소생술 게임</a></li>
+                            <li><a class="dropdown-item" href="./game_virus.html">바이러스 피하기 게임</a></li>
+                            <li><a class="dropdown-item" href="./game_bee.html">벌침 빼기 게임</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input id="text" class="form-control me-2" type="search" placeholder="입력하세요." aria-label="Search">
+                    <button id="searchButton" class="btn btn-success" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class = "main_cpr">
+        <table>
+            <h1>심폐소생술</h1>
+            <div class="cprvid">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/q7J2T6MFA9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="slideshow-container">
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="images/cpr1.jpg" style="width:100%">
+                    <div class="text">위기탈출 넘버원</div>
+                    <li>심정지 확인(반응 및 호흡확인)하기</li>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="images/cpr2.jpg" style="width:100%">
+                    <div class="text">위기탈출 넘버원</div>
+                    <li>119 신고와 도움요청하기</li>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="images/cpr3.jpg" style="width:100%">
+                    <div class="text">위기탈출 넘버원</div>
+                    <li>가슴압박 위치잡기</li>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="images/cpr4.jpg" style="width:100%">
+                    <div class="text">위기탈출 넘버원</div>
+                    <li>가슴압박 30회 시행하기</li>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="images/cpr5.jpg" style="width:100%">
+                    <div class="text">위기탈출 넘버원</div>
+                    <li>기도 유지 후 인공호흡 2회 시행하기</li>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="images/cpr6.jpg" style="width:100%">
+                    <div class="text">위기탈출 넘버원</div>
+                    <li>가슴압박과 인공호흡 병행하기</li>
+                </div>
+                
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+                <a class="next" onclick="moveSlides(1)">&#10095;</a>
+                </div>
+                <br />
+                
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+        </table>
+    </div>
+    <script src="./scripts/cpr.js"></script>
+    <script src="./scripts/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8d7f9ad8fc.js" crossorigin="anonymous"></script>
+</body>
+</head>
+</html>
